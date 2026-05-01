@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Client</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+         .header_section {
+    /* আপনার নতুন ইমেজের পাথ এখানে দিন */
+    background-image: url('images/banner.jpg') !important; 
+    
+    background-size: cover;      /* ইমেজটি পুরো সেকশন জুড়ে থাকবে */
+    background-position: center;   /* ইমেজটি মাঝখানে থাকবে */
+    background-repeat: no-repeat;
+    padding: 15px 0;             /* উপরে নিচে একটু গ্যাপ থাকবে */
+    width: 100%;
+    z-index: 999;
+}
+
+/* Farmer Choice Boxes */
+.choice_box {
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: 0.4s;
+    background: #fff;
+    border-bottom: 6px solid #85A900;
+}
+
+.choice_box:hover {
+    transform: translateY(-10px);
+}
+
+.choice_icon {
+    font-size: 50px;
+    color: #85A900;
+    margin-bottom: 20px;
+}
+
+.choice_box h2 {
+    color: #2D393B;
+    font-weight: 700;
+}
+
+/* Approved Farmer Card Style */
+.approved_farmer_card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    position: relative;
+    margin-top: 30px;
+    border: 1px solid #eee;
+}
+
+.farmer_status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #85A900;
+    color: #fff;
+    padding: 3px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.approved_farmer_card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #f8f9fa;
+    object-fit: cover;
+}
+
+.approved_farmer_card h3 {
+    color: #2D393B;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.farmer_desc {
+    font-size: 14px;
+    color: #777;
+    margin: 15px 0;
+}
+
+.card_login_btn a {
+    display: inline-block;
+    padding: 8px 25px;
+    background: #2D393B;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.card_login_btn a:hover {
+    background: #85A900;
+}
+
+.modal-content input, .modal-content select {
+    border-radius: 10px !important;
+    border: 1px solid #ddd !important;
+    padding: 10px !important;
+}
+
+.modal-content label {
+    font-weight: 600;
+    color: #2D393B;
+    margin-top: 10px;
+}
+
+.modal-header .close {
+    opacity: 1;
+}
+select.form-control {
+    display: block !important;
+    width: 100% !important;
+    appearance: auto !important;
+    -moz-appearance: auto !important;
+    -webkit-appearance: auto !important;
+}
+.modal-content select {
+    height: 45px !important;
+    padding: 5px 10px !important;
+    overflow: hidden !important;
+}
+
+/* Farmer Section Background Design */
+.farmer_section {
+    /* ১. আপনার ইমেজের নাম এবং পাথ এখানে দিন */
+    background-image: url('images/contact-bg.png'); 
+    
+    /* ২. ইমেজটি স্ক্রিনের সাথে খাপ খাওয়াতে */
+   
+    background-repeat: no-repeat;    /* ইমেজটি বারবার রিপিট হবে না */
+    
+    /* ৩. লেখা পরিষ্কার দেখানোর জন্য একটি হালকা কালো আবরণ (Overlay) */
+   
+}
+
+
+      </style>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="service.html">Service</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="client.html">Client</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="Blog.html">Blog</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!-- header section end -->
+      
+
+<div class="farmer_section layout_padding">
+   <div class="container">
+   
+      <div class="row">
+         <div class="col-md-12">
+            <h1 class="contact_taital text-center mt-5">Farmer Portal</h1>
+         </div>
+      </div>
+
+ <div class="row justify-content-center">
+               <div class="col-md-5">
+                  <div class="choice_box">
+                     <div class="choice_icon"><i class="fa fa-user-plus"></i></div>
+                     <h2>New Farmer?</h2>
+                     <p>Create an account to submit your documents and apply for stock loans.</p>
+                     <div class="btn_main">
+                        <div class="send_bt active"><a href="#" data-toggle="modal" data-target="#registerModal">Register Now</a></div>
+                     </div>
+                  </div>
+               </div>
+
+    <div class="col-md-5">
+        <div class="choice_box login_bg">
+            <div class="choice_icon"><i class="fa fa-sign-in"></i></div>
+            <h2>Already Registered?</h2>
+            <p>Log in to check your loan status or manage your profile details.</p>
+            <div class="btn_main">
+                <div class="send_bt">
+                    <a href="#" data-toggle="modal" data-target="#loginModal" style="color: #fff;">Login Here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+               <div class="modal-header" style="background: #85A900; color: #fff;">
+                  <h5 class="modal-title">Farmer Registration & Loan Application</h5>
+                  <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+               </div>
+               <form action="#" method="POST" enctype="multipart/form-data">
+                  <div class="modal-body">
+                     <div class="row">
+                        <div class="col-md-6 form-group">
+                           <label>Full Name</label>
+                           <input type="text" name="name" class="form-control" placeholder="Enter Full Name" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                           <label>Phone Number</label>
+                           <input type="text" name="phone" class="form-control" placeholder="017XXXXXXXX" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                           <label>NID Number</label>
+                           <input type="text" name="nid" class="form-control" placeholder="National ID Card Number" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                           <label>Amount of Land (Decimals)</label>
+                           <input type="number" name="land_amount" class="form-control" placeholder="e.g. 50">
+                        </div>
+                        <div class="col-md-6 form-group">
+                           <label>Loan Amount Needed (Tk)</label>
+                           <input type="number" name="loan_amount" class="form-control" placeholder="e.g. 50000" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                           <label>Farming Category</label>
+                           <select name="category" class="form-control" required>
+                              <option value="" disabled selected>Select Category</option>
+                              <option value="crop">Crop Farming</option>
+                              <option value="poultry">Poultry</option>
+                              <option value="fishery">Fishery</option>
+                              <option value="dairy">Dairy</option>
+                           </select>
+                        </div>
+                        <div class="col-md-12 form-group">
+                           <label>Farmer's Profile Image</label>
+                           <input type="file" name="farmer_image" class="form-control" accept="image/*" style="padding: 5px;">
+                        </div>
+                        <div class="col-md-12 form-group">
+                           <label>Full Address</label>
+                           <textarea name="address" class="form-control" rows="2" placeholder="Village, Upazila, District" required></textarea>
+                        </div>
+                        <div class="col-md-12 form-group">
+                           <label>Password</label>
+                           <input type="password" name="password" class="form-control" placeholder="Create a password" required>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="submit" class="btn" style="background: #85A900; color: #fff; border-radius: 25px; padding: 10px 40px;">Apply & Register</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="border-radius: 20px;">
+            <div class="modal-header" style="background: #2D393B; color: #fff; border-radius: 20px 20px 0 0;">
+                <h5 class="modal-title" id="loginModalLabel">Farmer Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" style="color: #fff;">&times;</span>
+                </button>
+            </div>
+            <form action="#" method="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" class="form-control" placeholder="017XXXXXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="Enter Password" required>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="submit" class="btn btn-block" style="background: #2D393B; color: #fff; padding: 12px; border-radius: 10px;">Login Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+      <hr class="margin_top90">
+
+      <div class="row margin_top90">
+         <div class="col-md-12">
+            <h2 class="contact_taital text-center" style="font-size: 30px;">Our Verified Farmers</h2>
+         </div>
+         
+         <div class="col-lg-4 col-sm-6">
+            <div class="approved_farmer_card">
+               <div class="farmer_status">Verified</div>
+               <img src="images/farmer-img.jpg" alt="Farmer">
+               <h3>Md. Rahim Ali</h3>
+               <p><i class="fa fa-map-marker"></i> Bogra, Bangladesh</p>
+               <p class="farmer_desc">Expert in Maize & Rice cultivation with 10 years experience.</p>
+               <div class="card_login_btn"><a href="login.html">View Profile</a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+      <!-- footer section start -->
+      <div class="footer_section layout_padding margin_top90">
+         <div class="container">
+            <div class="footer_section_2">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Contact Us</h2>
+                     <div class="location_text"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_15">Location</span></a></div>
+                     <div class="location_text"><a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_15">(+71) 8522369417</span></a></div>
+                     <div class="location_text"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_15">demo@gmail.com</span></a></div>
+                     <div class="social_icon">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Useful link </h2>
+                     <div class="footer_menu">
+                        <ul>
+                           <li class="active"><a href="index.html">Home</a></li>
+                           <li><a href="about.html">About</a></li>
+                           <li><a href="service.html">Service</a></li>
+                           <li><a href="work.html">Work</a></li>
+                           <li><a href="testimonial.html">Testimonial</a></li>
+                           <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">About</h2>
+                     <p class="lorem_text">Readable content of a page when looking at its layoutreadable content of a page when looking at its layout
+                     </p>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Newsletter</h2>
+                     <div class="form-group">
+                        <textarea class="update_mail" placeholder="Enter Your Email" rows="5" id="comment" name="Enter Your Email"></textarea>
+                        <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <p class="copyright_text">2024 All Rights Reserved. Design by <a href="#">Nusrat Jahan</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files
+      Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      
+      <script src="js/owl.carousel.js"></script>
+      <script>
+         $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:35,
+            nav:true,
+            center: true,
+            responsive:{
+             0:{
+                 items:1,
+                    margin:0
+                  },
+                575:{
+                    items:1,
+                    margin:0
+                },
+                768:{
+                    items:3,
+                    margin:0
+                },
+                1000:{
+                    items:3
+                }
+            }
+         }) 
+         
+      </script>
+   </body>
+</html>
