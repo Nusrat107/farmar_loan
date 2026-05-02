@@ -174,17 +174,6 @@
     transition: all 0.3s ease;
     border: none;
 }
-  .header_section {
-    /* আপনার নতুন ইমেজের পাথ এখানে দিন */
-    background-image: url('images/banner.jpg') !important; 
-    
-    background-size: cover;      /* ইমেজটি পুরো সেকশন জুড়ে থাকবে */
-    background-position: center;   /* ইমেজটি মাঝখানে থাকবে */
-    background-repeat: no-repeat;
-    padding: 15px 0;             /* উপরে নিচে একটু গ্যাপ থাকবে */
-    width: 100%;
-    z-index: 999;
-}
 
 .btn-about:hover {
     background-color: #218838; /* হোভার করলে একটু গাঢ় হবে */
@@ -459,7 +448,54 @@
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3) !important; 
 }
 /* ================= RESPONSIVE ADD START ================= */
+/* ================= MOBILE NAVBAR TRANSPARENT OVER IMAGE ================= */
 
+@media (max-width: 991px) {
+
+    /* পুরো navbar collapse এর background তুলে দাও */
+    .navbar-collapse {
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-top: 0 !important;
+        border: none !important;
+    }
+
+    /* nav link গুলো image এর উপর readable রাখার জন্য শুধু text style */
+    .navbar-nav {
+        background: transparent !important;
+    }
+
+    .navbar-nav .nav-link {
+        color: #ffffff !important;   /* image এর উপর white text */
+        font-weight: 600;
+        padding: 8px 0;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.6); /* readable করার জন্য */
+    }
+
+    /* dropdown menu ও transparent */
+    .dropdown-menu {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .dropdown-item {
+        color: #fff !important;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    }
+
+    .dropdown-item:hover {
+        background: transparent !important;
+        color: #85A900 !important;
+    }
+
+    /* toggler icon clean */
+    .navbar-toggler {
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
 /* 🔥 MOBILE (max-width:768px) */
 @media (max-width: 768px) {
 
