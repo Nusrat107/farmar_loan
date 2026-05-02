@@ -36,7 +36,32 @@
          /* =========================
    RESPONSIVE CSS
 ========================= */
+/* ================= BENEFIT CARD MOBILE FIX ================= */
 
+@media (max-width: 768px) {
+
+    .benefit_card {
+        margin-bottom: 25px !important;   /* ফাঁকা জায়গা */
+        padding: 25px !important;
+    }
+
+    .rice_section .row {
+        row-gap: 20px; /* নতুন Bootstrap gap fix */
+    }
+
+    .col-md-4 {
+        margin-bottom: 10px;
+    }
+
+    .benefit_card h4 {
+        font-size: 18px;
+    }
+
+    .benefit_card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
 /* Extra small devices (phones) */
 @media (max-width: 576px) {
 
@@ -138,6 +163,7 @@
 
   .benefit_card {
     height: auto;
+ 
   }
 
   .why_us_box,

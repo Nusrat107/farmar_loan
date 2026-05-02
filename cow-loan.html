@@ -168,6 +168,37 @@ img {
       border-radius: 10px;
    }
 }
+/* =========================
+   BENEFIT CARD RESPONSIVE FIX
+========================= */
+
+/* Desktop default spacing */
+.benefit_card{
+   margin-bottom: 25px;
+}
+
+/* Tablet + Mobile spacing control */
+@media (max-width: 991px){
+   .loan_page_section .row{
+      row-gap: 25px;
+   }
+
+   .benefit_card{
+      height: auto;
+   }
+}
+
+/* Small mobile extra spacing */
+@media (max-width: 576px){
+   .loan_page_section .row{
+      row-gap: 20px;
+   }
+
+   .benefit_card{
+      padding: 20px;
+      text-align: center;
+   }
+}
          /* Header Section */
          .header_section {
             background-image: url('images/banner.jpg') !important; 

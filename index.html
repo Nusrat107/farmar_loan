@@ -623,6 +623,51 @@
 
 }
 
+/* ================= MOBILE ONLY FIX ================= */
+@media (max-width: 768px) {
+
+    /* card content center align */
+    .services_section .box_main {
+        text-align: center;
+    }
+
+    /* image center */
+    .services_section .service_img img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* text center */
+    .services_section .development_text,
+    .services_section .services_text {
+        text-align: center;
+    }
+
+    /* ===== READ MORE BUTTON CENTER FIX ===== */
+    .services_section .readmore_bt {
+        display: flex;
+        justify-content: center;   /* 🔥 TRUE CENTER */
+        align-items: center;
+        margin-top: 15px;
+        margin-left: 35px !important;
+    }
+
+    .services_section .readmore_bt a {
+        display: inline-block;
+        padding: 10px 25px;
+        border-radius: 30px;
+        background: #85A900;
+        color: #fff !important;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s ease;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .services_section .readmore_bt a:active {
+        transform: scale(0.95);
+    }
+}
 /* ================= RESPONSIVE ADD END ================= */
       </style>
    </head>
