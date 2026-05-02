@@ -33,6 +33,141 @@
       <link rel="stylesoeet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
      <style>
+      /* =========================
+   BASE RESET
+========================= */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+/* =========================
+   LARGE DESKTOP (1200px+)
+========================= */
+@media (min-width: 1200px) {
+   .container {
+      max-width: 1140px;
+      margin: auto;
+   }
+}
+
+/* =========================
+   LAPTOP / SMALL DESKTOP (992px - 1199px)
+========================= */
+@media (max-width: 1199px) {
+   .section_title {
+      font-size: 32px;
+   }
+
+   .agent_card,
+   .choice_box,
+   .benefit_card {
+      padding: 25px;
+   }
+}
+
+/* =========================
+   TABLET (768px - 991px)
+========================= */
+@media (max-width: 991px) {
+
+   .navbar-nav {
+      text-align: center;
+   }
+
+   .header_section {
+      text-align: center;
+   }
+
+   .section_title {
+      font-size: 28px;
+   }
+
+   .feature_img {
+      margin-top: 30px;
+   }
+
+   .agent_card,
+   .choice_box {
+      margin-bottom: 30px;
+   }
+
+   .why_us_dark {
+      text-align: center;
+      padding: 30px;
+   }
+}
+
+/* =========================
+   MOBILE (576px - 767px)
+========================= */
+@media (max-width: 767px) {
+
+   .section_title {
+      font-size: 24px;
+   }
+
+   .btn_custom,
+   .btn_portal {
+      padding: 12px 25px;
+      font-size: 14px;
+   }
+
+   .agent_card,
+   .choice_box,
+   .benefit_card {
+      padding: 20px;
+   }
+
+   .feature_img img {
+      margin-top: 20px;
+   }
+
+   .why_us_dark {
+      padding: 20px;
+   }
+}
+
+/* =========================
+   SMALL MOBILE (below 576px)
+========================= */
+@media (max-width: 575px) {
+
+   .section_title {
+      font-size: 20px;
+      text-align: center;
+   }
+
+   p {
+      font-size: 14px;
+   }
+
+   .navbar-nav li {
+      margin: 5px 0;
+   }
+
+   .btn_custom,
+   .btn_portal {
+      width: 100%;
+      text-align: center;
+   }
+
+   .agent_card,
+   .choice_box,
+   .benefit_card {
+      text-align: center;
+   }
+
+   .feature_img img {
+      border-radius: 10px;
+   }
+}
          /* Header Section */
          .header_section {
             background-image: url('images/banner.jpg') !important; 

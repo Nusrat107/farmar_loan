@@ -33,6 +33,126 @@
       <link rel="stylesoeet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <style>
+         /* =========================
+   BASE (Desktop First)
+========================= */
+
+.container {
+   width: 90%;
+   margin: auto;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+/* Navbar fix */
+.navbar-nav {
+   display: flex;
+   gap: 15px;
+}
+
+/* Section spacing */
+.section_padding {
+   padding: 80px 0;
+}
+
+/* Cards */
+.box_main {
+   transition: 0.3s;
+}
+.box_main:hover {
+   transform: translateY(-5px);
+}
+
+/* =========================
+   TABLET (768px)
+========================= */
+@media (max-width: 768px) {
+
+   .navbar-nav {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .header_section {
+      text-align: center;
+      padding: 10px;
+   }
+
+   .section_padding {
+      padding: 50px 0;
+   }
+
+   .col-md-4,
+   .col-md-6 {
+      width: 100%;
+      margin-bottom: 20px;
+   }
+
+   .service_img img {
+      width: 100%;
+   }
+
+   h1 {
+      font-size: 28px;
+   }
+
+   h2 {
+      font-size: 24px;
+   }
+}
+
+/* =========================
+   MOBILE (576px)
+========================= */
+@media (max-width: 576px) {
+
+   .navbar {
+      padding: 10px;
+   }
+
+   .logo img {
+      width: 120px;
+   }
+
+   .section_padding {
+      padding: 30px 0;
+   }
+
+   p {
+      font-size: 14px;
+   }
+
+   .btn_portal {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+   }
+
+   .footer_section {
+      text-align: center;
+   }
+}
+
+/* =========================
+   SMALL MOBILE (400px)
+========================= */
+@media (max-width: 400px) {
+
+   h1 {
+      font-size: 22px;
+   }
+
+   h2 {
+      font-size: 18px;
+   }
+
+   .container {
+      width: 95%;
+   }
+}
        .header_section {
             background-image: url('images/banner.jpg') !important; 
             background-size: cover;
